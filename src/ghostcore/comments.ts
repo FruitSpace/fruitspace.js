@@ -47,7 +47,7 @@ export class Comments {
         }
         return this._api.do(`/${this.srvId}/db/deleteGJAccComment20.php`, {
             accountID: authData.accountID,
-            gjp: authData.gjp,
+            gjp2: authData.gjp2,
             commentID: commentID,
         })
     }
@@ -59,7 +59,7 @@ export class Comments {
         }
         return this._api.do(`/${this.srvId}/db/deleteGJComment20.php`,  {
             "accountID": authData.accountID,
-            "gjp": authData.gjp,
+            "gjp2": authData.gjp2,
             "commentID": commentID,
             "levelID": levelID,
         })
@@ -81,7 +81,7 @@ export class Comments {
 
         return await this._api.do(`/${this.srvId}/db/uploadGJAccComment20.php`, {
             accountID: authData.accountID,
-            gjp2: authData.gjp,
+            gjp2: authData.gjp2,
             comment: Buffer.from(comment).toString('base64'),
         }) as uploadAccCommentResponse;
     }

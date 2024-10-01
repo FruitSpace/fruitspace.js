@@ -34,7 +34,7 @@ export class Levels {
 
         })
     }
-    getLevels = async (str?: string | null, gauntlet?: number, type?: number, diff?: string, len?: number, page?: number) => {
+    getLevels = async (str?: string, gauntlet?: number, type?: number, diff?: string, len?: number, page?: number) => {
         const authData = this._api.getAuthData(); // Получаем accountID и gjp
 
         if (!authData) {

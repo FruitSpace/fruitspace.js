@@ -67,9 +67,13 @@ export class GhostClient {
                 username: username,
                 gjp2: gjp2,
             });
-            return response.accountID;
+            return response.uid;
         } catch (error) {
-            console.error('Ошибка при запросе accountID:', error);
+            if (axios.isAxiosError(error)) {
+                console.error('Axios error:', (error as AxiosError).response);
+            } else {
+                console.error('Unexpected error:', error);
+            }
             throw error;
         }
     }
