@@ -1,8 +1,13 @@
 {
   "name": "@fruitspace/sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "keywords": [],
+  "scripts": {
+    "build": "tsc"
+  },
+  "main": "./dist/fruitspace.js",
+  "types": "./dist/fruitspace.d.ts",
   "author": "fruitspace",
   "license": "ISC",
   "description": "",
